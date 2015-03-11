@@ -1,0 +1,67 @@
+.clearfix {
+    &:before,
+    &:after {
+        content: "";
+	display: table;
+	border-collapse: collapse;
+    }
+    
+    &:after {
+        clear: both;
+    }
+}
+
+/* mixins */
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+        -ms-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+
+.box-shadow(@box-shadow) {
+    -webkit-box-shadow: @box-shadow;
+       -moz-box-shadow: @box-shadow;
+            box-shadow: @box-shadow;
+}
+
+.transform(@transform) {
+    -webkit-transform: @transform;
+       -moz-transform: @transform;
+        -ms-transform: @transform;
+         -o-transform: @transform;
+            transform: @transform;
+}
+
+.gradient (@colorTop, @colorBottom) {
+    background: -webkit-linear-gradient(top, @colorTop 0%, @colorBottom  100%); /* Chrome10+,Safari5.1+ */
+    background:    -moz-linear-gradient(top, @colorTop 0%, @colorBottom  100%); /* FF3.6+ */
+    background:     -ms-linear-gradient(top, @colorTop 0%, @colorBottom  100%); /* IE10+ */
+    background:    linear-gradient(to bottom, @colorTop 0%, @colorBottom 100%); /* W3C */
+}
+
+.font-face(@font){
+    @font-face {
+        font-family: @font;
+        src: url('../fonts/@{font}.eot');
+        src: url('../fonts/@{font}.eot?#iefix') format('embedded-opentype');
+              src: local('@{font}'),
+             url('../fonts/@{font}.ttf') format('truetype'),
+             url('../fonts/@{font}.woff') format('woff'),
+             url('../fonts/@{font}.svg#@{font}') format('svg');
+    }
+}
+
+.animation(@animation) {
+    -webkit-animation: @animation;
+       -moz-animation: @animation;
+            animation: @animation;
+}

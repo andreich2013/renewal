@@ -1,0 +1,319 @@
+.clear{
+    clear: both;
+}
+
+.clearfix {
+    .clearfix();
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.table{ 
+    display: table;
+}
+
+.table-cell{ 
+    display: table-cell;
+}
+
+.bg-transparent {
+    padding: 7px;
+    background: url(../img/bg_opacity.png) repeat top left;
+    .border-radius(5px);
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 980px;
+}
+
+.txt {
+    p {
+        margin: 0 0 15px 0;
+        line-height: 20px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.pathway {
+    margin: 0 0 20px 0;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #dadada;
+    
+    ul {
+        li {
+            display: inline;
+            margin: 0 5px 0 4px;
+            
+            a {
+                text-decoration: underline;
+                color: #dadada;
+            }
+        }
+    }
+}
+
+.paginationControl {
+    text-align: center;
+    width: 100%;
+    
+    ul.pages {
+        text-align:center;
+        line-height: 18px;
+        
+        li {
+            display:inline-block;
+            vertical-align: top;
+            margin: 0 3px;
+            
+            &.pages-next,
+            &.pages-prev {
+                margin: 0;
+                
+                a,
+                span {
+                    padding: 0;
+                    width: 18px;
+                    background: none;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                
+            }
+        }
+        
+        a,
+        span {
+            display: block;
+            margin: 0;
+            padding: 3px 7px;
+            color: #000000;
+        }
+        
+        a:hover,
+        span {
+            color: #ffffff;
+        }
+    }
+}
+
+/*формы*/
+
+.post_form {
+    
+    form {
+        
+        input,
+        select,
+        textarea {
+            margin: 5px 0;
+            padding: 3px 5px;
+            width: 238px;
+            border: 1px solid #676767;
+            .border-radius(5px);
+            background: transparent;
+        }
+        
+        input[type="submit"]{
+            margin: 15px 0 0 0;
+            padding: 5px 20px;
+            width: auto;
+            .border-radius(5px);
+            .gradient(#00a4ff, #50c0ff);
+            font-size: 14px;
+            cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        select {
+            width: auto;
+        }
+
+        textarea {
+            min-width: 200px;
+            max-width: 238px;
+            min-height: 75px;
+        }
+    }
+    
+}
+
+
+.post_form #group_0-label{
+    display: none;
+}
+
+.comments_form {
+    float: right;
+    width: 660px;
+    margin: 0 1px 0 0;
+}
+
+.post_form.comments_form form textarea{
+    min-width: 648px;
+    max-width: 648px;
+}
+
+.post_form.edit_form form input[type="submit"],
+.post_form.login-form.gray-button form input[type="submit"],
+.post_form.register_form form input[type="submit"],
+.post_form.comments_form form input[type="submit"] {
+    .gradient(#c5c5c5, #676767);
+}
+
+.post_form form .captcha{
+    float: left;
+    width: 250px;
+}
+.post_form form .captcha .captcha_img_wr{
+    float: left;
+}
+.post_form form .captcha .captcha_img_wr{
+    vertical-align: middle;
+}
+.post_form form .refresh_captcha{
+    float: left;
+    margin: 26px 0 0 7px;
+}
+.post_form form .captcha input{
+    width: 100px;
+    float: right;
+    margin: 25px 0 0 0;
+}
+.form_responce p {
+    text-align: center;
+    line-height: 25px;
+    height: 25px;
+    color: green;
+    text-indent: 0px;
+}
+form .form_errors {
+    display: block;
+    color: red;
+    font-size: 11px;
+    line-height: 14px;
+}
+.form_responce.login_page p {
+    text-align: left;
+}
+
+/* фильтр */
+
+.filter{
+    margin: 0 0 20px 0;
+    line-height: 26px;
+    
+    form {
+        
+        p {
+            margin: 0 10px 0 0;
+            float: left;
+        }
+        
+        .filter_section {
+            float: left;
+            margin: 0 25px 0px 0;
+            
+            select {
+                float: left;
+                margin: 0;
+                width: 140px;
+                background: #ffffff;
+                
+                &:disabled {
+                    opacity: 0.4;
+                }
+                
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        .filter_date{
+            float: left;
+            margin: 0;
+            
+            input[type="text"]{
+                width: 70px;
+                margin: 0 5px 0px 0;
+                padding: 4px 5px;
+                
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        input[type="submit"]{
+            float: right;
+            margin: 26px 0 0 0;
+            padding: 4px 20px;
+            .gradient(#c5c5c5, #676767);
+        }
+    }
+}
+
+.filter-block {
+    float: left;
+    margin: 0 10px 0px 0; 
+    
+    &:last-child {
+        margin: 0;
+    }
+    
+    span,
+    label {
+        display: block;
+        text-align: center;
+    }
+    
+    .form_errors {
+        max-width: 140px;
+        text-align: left;
+    }
+}
+
+.catalog_product_comments_comment{
+    position: relative;
+}
+.catalog_product_comments_comment:hover .delete_article{
+    display: block;
+}
+.catalog_product_comments_comment form input{
+    border: none;
+    background: none;
+    color: navy;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.catalog_product_comments_comment form a{
+    text-decoration: underline;
+    color: navy;
+    margin: 0 5px;
+}
+
+.catalog_product_comments_comment form input:hover,
+.catalog_product_comments_comment form a:hover{
+    text-decoration: none;
+}
