@@ -62,6 +62,7 @@
 
 <script type="text/javascript" src="/js/app/api/history.js"></script>
 <script type="text/javascript" src="/js/app/util/util.js"></script>
+<script type="text/javascript" src="/js/app/util/defaults.js"></script>
 <script type="text/javascript" src="/js/app/util/observer.js"></script>
 <script type="text/javascript" src="/js/app/util/ajax.js"></script>
 <script type="text/javascript" src="/js/app/util/nav.js"></script>

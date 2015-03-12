@@ -9,10 +9,9 @@
             pageToken = null,
             isDataLoaded = false,
             template = {
-                filter: _.template($("#page-filter-block-template").html()),
+                filter: _.template($("#video-filter-block-template").html()),
                 list: _.template($("#page-video-template").html())
             };
-//            query = App().util.url.search.parse(win.location.search);
             
         var api = {
             
@@ -39,7 +38,8 @@
             
             initEvents: function() {
                 $(".block-preloader").on("click", this.loadMore);
-                $('input[name="search"]').on("keypress", this.load);
+                $('input[name="search"]').on("keyup", this.load);
+                $('select[name="section"], input[name="date_from"], input[name="date_to"]').on("change", this.load);
             },
             
             getCache: function() {
@@ -106,7 +106,8 @@
                 youtubeAPI.getPlaylists(),
                 api.getCache()
             ).then(function(playlists, searchData) {
-                var $form = $(".post_form");
+                var $form = $(".post_form"),
+                    $dateFrom, $dateTo;
                 
                 $form.html(template.filter({
                     sections: playlists[0].items,
@@ -116,11 +117,17 @@
                     search: ''
                 }));
                 
+                $dateFrom = $form.find('input[name="date_from"]');
+                $dateTo = $form.find('input[name="date_to"]');
+                
                 search.dom.set('select', $form.find('select[name="section"]')[0]);
-                search.dom.set('dateFrom', $form.find('input[name="date_from"]')[0]);
-                search.dom.set('dateTo', $form.find('input[name="date_to"]')[0]);
+                search.dom.set('dateFrom', $dateFrom[0]);
+                search.dom.set('dateTo', $dateTo[0]);
                 search.dom.set('search', $form.find('input[name="search"]')[0]);
                 search.data.set(JSON.parse(searchData[0][0].data));
+                
+                $dateFrom.glDatePicker(App().util.defaults.datepicker);
+                $dateTo.glDatePicker(App().util.defaults.datepicker);
                 
                 api.load();
 

@@ -61,12 +61,26 @@
                 <input name="date_to" class="last form_elements"  type="text" size="10" value="<%- dateTo %>"/>
             </div>
         </div>
-        <div class="filter-block">
-            <span>поиск</span>
-            <input name="search" class="last form_elements"  type="text" value="<%- search %>"/>
-        </div>
 
         <input type="submit" value="Показать"/>
+    </fieldset>
+</form>
+</script>
+
+<script type="text/template" id="video-filter-block-template">
+<form id="filter-form" class="clearfix">
+    <fieldset class="clearfix filter-video">
+        <select id="video-section-select" name="section" class="form_elements" <%- sections.length > 0 ? "" : "disabled" %> >
+            <option value="0">Все</option>
+            <% _.each(sections, function(item) { %>
+                <option value="<%- item.id %>" <%- section === item.id ? "selected" : "" %> >
+                    <%- item.snippet.title %>
+                </option>
+            <% }); %>
+        </select>
+        <input name="date_from" placeholder="" readonly data-value="" class="form_elements" type="text" value="<%- dateFrom %>"/>
+        <input name="date_to" placeholder="" readonly data-value="" class="form_elements"  type="text" value="<%- dateTo %>"/>
+        <input name="search" placeholder="" class="form_elements"  type="text" value="<%- search %>"/>
     </fieldset>
 </form>
 </script>
