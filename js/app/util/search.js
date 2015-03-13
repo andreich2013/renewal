@@ -98,16 +98,16 @@
                         
                     var val = select.options[select.selectedIndex].value,
                         p = val !== '0' ? val : null,
-                        from = dateFrom.value ? dateFrom.value : null,
-                        to = dateTo.value ? dateTo.value : null,
+                        from = dateFrom.dataset.value ? parseInt(dateFrom.dataset.value, 10)/1000 : null,
+                        to = dateTo.dataset.value ? parseInt(dateTo.dataset.value, 10)/1000 : null,
                         s = search.value ? search.value : null;
-                        
+                
                     api.tmp.reset();
                     api.current.reset();
                         
                     for(var i = 0, item; i < length; i=i+1) {
                         item = data[i];
-
+                            
                         if(check.playlistId(item, p) && 
                            check.search(item, s) && 
                            check.dateFrom(item, from) && 
