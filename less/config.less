@@ -13,6 +13,12 @@
 
 /* mixins */
 
+.box-sizing(@box-sizing) {
+    -webkit-box-sizing: @box-sizing;
+       -moz-box-sizing: @box-sizing;
+            box-sizing: @box-sizing;
+}
+
 .border-radius(@radius) {
     -webkit-border-radius: @radius;
        -moz-border-radius: @radius;
@@ -39,6 +45,11 @@
         -ms-transform: @transform;
          -o-transform: @transform;
             transform: @transform;
+}
+
+.opacity(@opacity) {
+    -moz-opacity: @opacity;
+         opacity: @opacity;
 }
 
 .gradient (@colorTop, @colorBottom) {

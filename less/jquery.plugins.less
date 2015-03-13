@@ -1040,11 +1040,143 @@
     }
 }
 
+
+/*============================================================================*/
+/*glDatePicker.default.css*/
+
+.gldp-default {
+    position: absolute;
+    font-family: 'helvetica';
+}
+
+/* Core style for every cell */
+.gldp-default .core {
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 0;
+    .gradient(#ffffff, #dadada);
+    .box-sizing(border-box);
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    color: #222;
+}
+
+/* Cell border */
+.gldp-default .border {
+    border-style: solid;
+    border-width: 0;
+    border-color: #888;
+}
+
+/* Month/Year text and select */
+.gldp-default .monyear,
+.gldp-default .monyear select {
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+/* Month/Year text */
+.gldp-default .monyear span {
+    margin: 0 5px 0 5px;
+}
+
+/* Prev/Next arrows */
+.gldp-default .prev-arrow,
+.gldp-default .next-arrow {
+    color: #222;
+}
+
+.gldp-default .prev-arrow:active,
+.gldp-default .next-arrow:active {
+    color: #f00;
+}
+
+.gldp-default .prev-arrow-off,
+.gldp-default .next-arrow-off {
+    color: #222;
+    .opacity(0.15);
+}
+
+/* Days of the week */
+.gldp-default .dow {
+    color: #fff;
+    font-weight: bold;
+    cursor: wait !important;
+    .gradient(#ff0000, #ffcccc);
+}
+
+/* Weekdays */
+.gldp-default .mon,
+.gldp-default .tue,
+.gldp-default .wed,
+.gldp-default .thu,
+.gldp-default .fri {
+    font-weight: bold;
+}
+
+/* Weekend days */
+.gldp-default .sat,
+.gldp-default .sun {
+    color: #3858a8;
+    font-weight: bold;
+}
+
+/* Selectable days that are outside of current month being shown */
+.gldp-default .outday {
+    color: #666666 !important;
+}
+
+/* Hover */
+.gldp-default .mon:hover,
+.gldp-default .tue:hover,
+.gldp-default .wed:hover,
+.gldp-default .thu:hover,
+.gldp-default .fri:hover,
+.gldp-default .sat:hover,
+.gldp-default .sun:hover {
+    .gradient(#fcfff4, #e9e9ce);
+}
+
+/* Non-Selectable days */
+.gldp-default .noday {
+    color: #444;
+    font-weight: normal;
+    cursor: wait !important;
+    .gradient(#aaaaaa, #8a8a8a);
+}
+
+/* Currently selected day */
+.gldp-default .selected {
+    color: #fff;
+    font-weight: bold;
+    border-color: #c00;
+    .gradient(#e8bf88, #ffc19d);
+}
+
+/* Today */
+.gldp-default .today {
+    color: #fff;
+    font-weight: bold;
+    border-color: #00c;
+    .gradient(#88bfe8, #9dc1ff);
+}
+
+/* Special */
+.gldp-default .special {
+    color: #fff;
+    font-weight: bold;
+    border-color: #0c0;
+    .gradient(#88e888, #9dff9d);
+}
+
+
 /*============================================================================*/
 /*Sortable.js*/
 
 .sortable-ghost {
-    opacity: .2;
+    opacity: 0.2;
 }
 
 .drag-handle {

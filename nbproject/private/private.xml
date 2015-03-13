@@ -3,6 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/C:/d/OpenServer/domains/renewal/less/style.less</file>
+            <file>file:/C:/d/OpenServer/domains/renewal/js/app/util/search.js</file>
+            <file>file:/C:/d/OpenServer/domains/renewal/lib/api/cache.php</file>
+            <file>file:/C:/d/OpenServer/domains/renewal/less/lib.less</file>
+            <file>file:/C:/d/OpenServer/domains/renewal/js/app/views/video.js</file>
+            <file>file:/C:/d/OpenServer/domains/renewal/js/app/api/youtube.js</file>
+            <file>file:/C:/d/OpenServer/domains/renewal/inc/video/list.php</file>
+            <file>file:/C:/d/OpenServer/domains/renewal/inc/layout/templates.php</file>
+            <file>file:/C:/d/OpenServer/domains/renewal/inc/layout/head.php</file>
+        </group>
+>>>>>>> e4a272a4054fac85d2651fda5e0bc72630ad4148
     </open-files>
 </project-private>
