@@ -13,7 +13,7 @@
         var self = this,
             youtubeAPI = App().api.youtube,
             search = new App().util.Search(),
-            maxResults = 12,
+            maxResults = 18,
             pageToken = null,
             isDataLoaded = false,
             template = {
@@ -41,14 +41,27 @@
 //                    }
 //                });
                 
+                
+                
                 this.initEvents();
             },
             
             initEvents: function() {
+                var self = this,
+                    $videoList = $("#sortable-video-list"),
+                    top = $videoList.offset().top;
+                
+                $(window).on("scroll", function(e) {
+                    if($videoList.height() - top - pageYOffset < 0) {
+                        self.loadMore();
+                    }
+                    
+                });
+                
                 $(".block-preloader").on("click", this.loadMore);
                 $('input[name="search"]').on("keyup", function(e) {
                     if(restrictedCodes.indexOf(e.keyCode) !== -1) { return; } 
-                    self.load();
+                    api.load();
                 });
                 $('select[name="section"], input[name="date_from"], input[name="date_to"]').on("change", this.load);
             },
@@ -118,7 +131,8 @@
                 api.getCache()
             ).then(function(playlists, searchData) {
                 var $form = $(".post_form"),
-                    $dateFrom, $dateTo;
+                    $dateFrom, 
+                    $dateTo;
                 
                 $form.html(template.filter({
                     sections: playlists[0].items,
